@@ -27,6 +27,11 @@ ad_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for
 
 songs_between_ads = 5
 current_song_count = 0
+ads_enabled = True
+queue = []
+music_table = []
+
+admins = [1197161924668952710]
 
 channel_id = 1312065642937188433
 connected = False
@@ -80,6 +85,14 @@ async def on_voice_state_update(member, before, after):
             return
 
         while connected:
+            if len(music_table) == 0:
+                print("initializing queue")
+                for song in songs:
+                    music_table.append(song)
+
+                print("shuffling queue")
+                random.shuffle(music_table)
+
             global current_song_count
             print("checking if vc is still populated")
             if len(vc.channel.members) == 1:
@@ -88,27 +101,27 @@ async def on_voice_state_update(member, before, after):
                 connected = False
                 break
 
-            if current_song_count >= songs_between_ads:
-                print("time for an ad!")
-                ad_path = os.path.join(ad_folder, "wanna_break_from_the_ads.mp3")
-                source = FFmpegPCMAudio(ad_path)
-                vc.play(source)
-                print("playing ad...")
-                await asyncio.sleep(33)
-                print("played ad")
-                current_song_count = 0
+            if len(music_table) > 0:
+                if (current_song_count >= songs_between_ads) and (ads_enabled):
+                    print("time for an ad!")
+                    ad_path = os.path.join(ad_folder, "wanna_break_from_the_ads.mp3")
+                    source = FFmpegPCMAudio(ad_path)
+                    vc.play(source)
+                    print("playing ad...")
+                    await asyncio.sleep(33)
+                    print("played ad")
+                    current_song_count = 0
                 
+                current_song = os.path.join(music_folder, music_table[0])
 
-            print("choosing random song...")
-            current_song_count += 1
-            random_song = random.choice(songs)
-            song_path = os.path.join(music_folder, random_song)
+                current_song_count += 1
 
-            source = FFmpegPCMAudio(song_path)
-            vc.play(source)
-            print("playing song")
-            await asyncio.sleep(await get_song_duration(song_path) + 3)
-            print("played song")
+                source = FFmpegPCMAudio(current_song)
+                vc.play(source)
+                print("playing song")
+                await asyncio.sleep(await get_song_duration(current_song) + 3)
+                music_table.pop(0)
+                print("played song")
 
 @bot.command()
 async def help(ctx, arg=None):
@@ -151,5 +164,30 @@ async def help(ctx, arg=None):
 
     
     await ctx.reply(embed=embed)
+
+@bot.command()
+async def adfrequency(ctx, count):
+    if ctx.author.id in admins:
+        global songs_between_ads
+        global ads_enabled
+
+        if isinstance(count, int) and count > 0:
+            songs_between_ads = int(count)
+            ads_enabled = True
+            await ctx.reply(f"Ads will now play after {count} songs.")
+        elif count == "default":
+            songs_between_ads = 5
+            ads_enabled = True
+            await ctx.reply(f"Ads will now play after 5 songs.")
+        elif count == "false":
+            ads_enabled = False
+            await ctx.reply(f"Ads are now disabled.")
+        elif count == "true":
+            ads_enabled = True
+            await ctx.reply(f"Ads are now enabled.")
+        else:
+            await ctx.reply("Invalid parameters")
+    else:
+        await ctx.reply("You do not have permissions to use this command.")
 
 bot.run(tokens.discord_token)
