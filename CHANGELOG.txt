@@ -3,3 +3,6 @@ CHANGELOG
 v.1.1.0
 - Prevented songs from frequently repeating.
 - Added admin commands.
+
+v.1.1.0
+- Official release.
