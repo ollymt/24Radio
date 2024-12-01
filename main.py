@@ -32,6 +32,7 @@ queue = []
 music_table = []
 
 admins = [1197161924668952710]
+admin_code = "t00fpAist"
 
 channel_id = 1312065642937188433
 connected = False
@@ -171,22 +172,44 @@ async def adfrequency(ctx, count):
         global songs_between_ads
         global ads_enabled
 
-        if isinstance(count, int) and count > 0:
+        if isinstance(int(count), int) and count > 0:
             songs_between_ads = int(count)
             ads_enabled = True
             await ctx.reply(f"Ads will now play after {count} songs.")
-        elif count == "default":
-            songs_between_ads = 5
-            ads_enabled = True
-            await ctx.reply(f"Ads will now play after 5 songs.")
-        elif count == "false":
-            ads_enabled = False
-            await ctx.reply(f"Ads are now disabled.")
-        elif count == "true":
-            ads_enabled = True
-            await ctx.reply(f"Ads are now enabled.")
         else:
             await ctx.reply("Invalid parameters")
+    else:
+        await ctx.reply("You do not have permissions to use this command.")
+
+@bot.command()
+async def adsenabled(ctx, value):
+    if ctx.author.id in admins:
+        global ads_enabled
+
+        if value == "true":
+            ads_enabled = True
+            await ctx.reply("Ads enabled")
+        elif value == "false":
+            ads_enabled = False
+            await ctx.reply("Ads disabled")
+        else:
+            await ctx.reply("Invalid parameters")
+    else:
+        await ctx.reply("You do not have permissions to use this command.")
+
+@bot.command()
+async def reset(ctx, code):
+    if ctx.author.id in admins:
+        global ads_enabled
+        global songs_between_ads
+        global admin_code
+
+        if code == admin_code:
+            ads_enabled = True
+            songs_between_ads = 5
+            await ctx.reply("Bot settings has been reset")
+        else:
+            await ctx.reply("Incorrect code")
     else:
         await ctx.reply("You do not have permissions to use this command.")
 
