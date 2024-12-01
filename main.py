@@ -172,7 +172,7 @@ async def adfrequency(ctx, count):
         global songs_between_ads
         global ads_enabled
 
-        if isinstance(int(count), int) and count > 0:
+        if isinstance(int(count), int) and int(count) > 0:
             songs_between_ads = int(count)
             ads_enabled = True
             await ctx.reply(f"Ads will now play after {count} songs.")
