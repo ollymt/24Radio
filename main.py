@@ -24,6 +24,7 @@ bot = commands.Bot(command_prefix='>',intents=intents, help_command=None)
 
 music_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/music"
 ad_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/ad"
+system_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/system"
 
 songs_between_ads = 5
 current_song_count = 0
@@ -113,14 +114,18 @@ async def on_voice_state_update(member, before, after):
                     print("played ad")
                     current_song_count = 0
                 
-                current_song = os.path.join(music_folder, music_table[0])
+                try:
+                    current_song = os.path.join(music_folder, music_table[0])
 
-                current_song_count += 1
+                    current_song_count += 1
 
-                source = FFmpegPCMAudio(current_song)
-                vc.play(source)
-                print("playing song")
-                await asyncio.sleep(await get_song_duration(current_song) + 3)
+                    source = FFmpegPCMAudio(current_song)
+                    vc.play(source)
+                    print("playing song")
+                    await asyncio.sleep(await get_song_duration(current_song) + 3)
+                except:
+                    vc.play(FFmpegPCMAudio(os.path.join(system_folder, "error.mp3")))
+                    print("an error occurred")
                 music_table.pop(0)
                 print("played song")
 
@@ -236,5 +241,14 @@ async def reset(ctx, code):
             await ctx.reply("Incorrect code")
     else:
         await ctx.reply("You do not have permissions to use this command.")
+
+@bot.command()
+async def ping(ctx):
+    """
+    Returns the bot's ping in milliseconds.
+    """
+    latency = bot.latency * 1000  # Convert from seconds to milliseconds
+    await ctx.reply(f"Pong! 🏓 Latency: {latency:.2f} ms")
+
 
 bot.run(tokens.discord_token)
