@@ -1,5 +1,11 @@
 CHANGELOG
 
+v.1.2.2
+- Bug fixes
+
+v.1.2.1
+- Added ping command.
+
 v.1.2.0
 - Added more music.
 
