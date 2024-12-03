@@ -210,6 +210,9 @@ async def help(ctx, arg=None):
     embed.add_field(name="- AJR",
                     value="- - Touchy Feely Fool\n- - 100 Bad Days\n- - The Dumb Song\n- - Burn The House Down\n- - Karma (Live from OSN)\n- - Way Less Sad\n- - Sober Up (feat. Rivers Cuomo)\n- - Weak\n- - Alice By The Hudson\n- - Pitchfork Kids\n- - Growing Old On Bleecker Street",
                     inline=True)
+    embed.add_field(name="- Anuc Atittawan",
+                    value="- - The Christmas Song\n- - The Christmas Song (feat. 13336hera)\n- - Santa Claus is Coming to Town (feat. 13336hera)\n- - All I Want For Christmas is You (feat. 13336hera)\n- - Let It Snow (feat. 13336hera)",
+                    inline=True)
 
     
     await ctx.reply(embed=embed)
