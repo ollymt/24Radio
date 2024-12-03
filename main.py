@@ -31,6 +31,13 @@ current_song_count = 0
 ads_enabled = True
 queue = []
 music_table = []
+ad_table = [
+    os.path.join(ad_folder, "spotify.mp3"),
+    os.path.join(ad_folder, "je_katy.mp3"),
+    os.path.join(ad_folder, "grubhub.mp3"),
+    os.path.join(ad_folder, "je_latto.mp3"),
+    os.path.join(ad_folder, "lim.mp3")
+]
 
 admins = [1197161924668952710]
 admin_code = "t00fpAist"
@@ -85,6 +92,11 @@ async def on_voice_state_update(member, before, after):
         if not songs:
             print("no songs in folder")
             return
+        
+        start_up = os.path.join(system_folder, "welcome.mp3")
+        startupSource = FFmpegPCMAudio(start_up)
+        vc.play(startupSource)
+        await asyncio.sleep(40)
 
         while connected:
             if len(music_table) == 0:
@@ -106,13 +118,20 @@ async def on_voice_state_update(member, before, after):
             if len(music_table) > 0:
                 if (current_song_count >= songs_between_ads) and (ads_enabled):
                     print("time for an ad!")
-                    ad_path = os.path.join(ad_folder, "wanna_break_from_the_ads.mp3")
+                    ad_announcement = FFmpegPCMAudio(os.path.join(system_folder, "adbreak_start.mp3"))
+                    vc.play(ad_announcement)
+                    await asyncio.sleep(71)
+                    ad_path = random.choice(ad_table)
                     source = FFmpegPCMAudio(ad_path)
                     vc.play(source)
                     print("playing ad...")
-                    await asyncio.sleep(33)
+                    await asyncio.sleep(await get_song_duration(ad_path) + 3)
                     print("played ad")
                     current_song_count = 0
+                    ad_announcement_2 = FFmpegPCMAudio(os.path.join(system_folder, "adbreak_end.mp3"))
+                    vc.play(ad_announcement_2)
+                    await asyncio.sleep(36)
+
                 
                 try:
                     current_song = os.path.join(music_folder, music_table[0])
