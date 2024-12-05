@@ -22,9 +22,9 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='>',intents=intents, help_command=None)
 
-music_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/music"
-ad_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/ad"
-system_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/system"
+music_folder = r"/home/container/music"
+ad_folder = r"/home/container/ad"
+system_folder = r"/home/container/system"
 
 songs_between_ads = 5
 current_song_count = 0
@@ -46,6 +46,18 @@ channel_id = 1312065642937188433
 connected = False
 check_inactivity = True
 inactivity_duration = 120
+
+async def play_song(vc, file_path):
+    """
+    Plays a song and waits for it to finish before returning.
+    """
+    source = FFmpegPCMAudio(file_path)
+    vc.play(source)
+
+    # Wait until the song finishes playing
+    while vc.is_playing():
+        await asyncio.sleep(1)  # Check every 1 second if the audio is still playing
+
 
 async def get_song_duration(file_path):
     # Load the audio file
@@ -103,8 +115,6 @@ async def on_voice_state_update(member, before, after):
                 print("initializing queue")
                 for song in songs:
                     music_table.append(song)
-
-                print("shuffling queue")
                 random.shuffle(music_table)
 
             global current_song_count
@@ -116,37 +126,35 @@ async def on_voice_state_update(member, before, after):
                 break
 
             if len(music_table) > 0:
-                if (current_song_count >= songs_between_ads) and (ads_enabled):
+                if (current_song_count >= songs_between_ads) and ads_enabled:
                     print("time for an ad!")
-                    ad_announcement = FFmpegPCMAudio(os.path.join(system_folder, "adbreak_start.mp3"))
-                    vc.play(ad_announcement)
-                    await asyncio.sleep(71)
-                    ad_path = random.choice(ad_table)
-                    source = FFmpegPCMAudio(ad_path)
-                    vc.play(source)
-                    print("playing ad...")
-                    await asyncio.sleep(await get_song_duration(ad_path) + 3)
-                    print("played ad")
-                    current_song_count = 0
-                    ad_announcement_2 = FFmpegPCMAudio(os.path.join(system_folder, "adbreak_end.mp3"))
-                    vc.play(ad_announcement_2)
-                    await asyncio.sleep(36)
+                    ad_announcement = os.path.join(system_folder, "adbreak_start.mp3")
+                    await play_song(vc, ad_announcement)
 
-                
+                    ad_path = random.choice(ad_table)
+                    print("playing ad...")
+                    await play_song(vc, ad_path)
+
+                    current_song_count = 0
+                    ad_announcement_end = os.path.join(system_folder, "adbreak_end.mp3")
+                    await play_song(vc, ad_announcement_end)
+                    continue
+
                 try:
                     current_song = os.path.join(music_folder, music_table[0])
-
                     current_song_count += 1
 
-                    source = FFmpegPCMAudio(current_song)
-                    vc.play(source)
-                    print("playing song")
-                    await asyncio.sleep(await get_song_duration(current_song) + 3)
-                except:
-                    vc.play(FFmpegPCMAudio(os.path.join(system_folder, "error.mp3")))
-                    print("an error occurred")
+                    print(f"playing song: {current_song}")
+                    await play_song(vc, current_song)
+
+                except Exception as e:
+                    print(f"An error occurred while playing the song: {e}")
+                    error_audio = os.path.join(system_folder, "error.mp3")
+                    await play_song(vc, error_audio)
+
                 music_table.pop(0)
                 print("played song")
+
 
 @bot.command()
 async def help(ctx, arg=None):
