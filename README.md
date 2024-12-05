@@ -1,0 +1,29 @@
+CHANGELOG
+
+v.1.4.1
+- Bug fixes
+
+v.1.4.0
+- Added more content.
+
+v.1.3.0
+- Added more features.
+
+v.1.2.2
+- Bug fixes
+
+v.1.2.1
+- Added ping command.
+
+v.1.2.0
+- Added more music.
+
+v.1.1.1
+- Bug fixes
+
+v.1.1.0
+- Prevented songs from frequently repeating.
+- Added admin commands.
+
+v.1.1.0
+- Official release.
