@@ -9,6 +9,8 @@ from os import path
 from os import listdir
 import random
 import asyncio
+import json
+import time
 
 import mutagen
 from mutagen import File
@@ -22,22 +24,28 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='>',intents=intents, help_command=None)
 
-music_folder = r"/home/container/music"
-ad_folder = r"/home/container/ad"
-system_folder = r"/home/container/system"
+root = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio"
+music_folder = os.path.join(root, "music")
+ad_folder = os.path.join(root, "ad")
+system_folder = os.path.join(root, "system")
+requests_json = os.path.join(root, "requests.json")
+last_request_json = os.path.join(root, "last_requests.json")
 
 songs_between_ads = 5
 current_song_count = 0
+request_cooldown = 3600 # in seconds
 ads_enabled = True
-queue = []
-music_table = []
-ad_table = [
+queue = {}
+music_table = {}
+ad_table = {
     os.path.join(ad_folder, "spotify.mp3"),
     os.path.join(ad_folder, "je_katy.mp3"),
     os.path.join(ad_folder, "grubhub.mp3"),
     os.path.join(ad_folder, "je_latto.mp3"),
     os.path.join(ad_folder, "lim.mp3")
-]
+}
+song_requests = {}
+last_requests = {}
 
 admins = [1197161924668952710]
 admin_code = "t00fpAist"
@@ -81,6 +89,23 @@ async def monitor_inactivity(vc):
 
 @bot.event
 async def on_ready():
+    global song_requests
+    global last_requests
+
+    print("loading song requests...")
+    try:
+        with open(requests_json, "r") as file:
+            song_requests = json.load(file)
+    except FileNotFoundError:
+        song_requests = {}
+
+    print("loading last requests...")
+    try:
+        with open(last_request_json, "r") as file:
+            last_requests = json.load(file)
+    except FileNotFoundError:
+        last_requests = {}
+
     print("bot is ready!")
     print("=============================")
 
@@ -280,5 +305,73 @@ async def ping(ctx):
     latency = bot.latency * 1000  # Convert from seconds to milliseconds
     await ctx.reply(f"Pong! 🏓 Latency: {latency:.2f} ms")
 
+async def add_request(username, link, status="pending"):
+    global song_requests
+    request_exists = False
+    can_request = True
+
+    # Check if the user is in cooldown
+    if username in last_requests and time.time() - last_requests[username] < request_cooldown:
+        return f"Wait {int((request_cooldown - (time.time() - last_requests[username])) / 60)} minutes before requesting again!"
+
+    # Check if the song was already requested
+    for request in song_requests:
+        if request["link"] == link:
+            request_exists = True
+            request["request_index"] += 1
+            break  # No need to keep looping after finding the song
+
+    # Add new request if it doesn't exist
+    if not request_exists:
+        song_requests[len(song_requests)] = {
+            "username": username,
+            "link": link,
+            "request_index": 1,
+            "status": "pending",
+            "timestamp": time.time()
+        }
+
+    # Update last request time
+    last_requests[username] = time.time()
+
+    print("saving request...")
+    saved = await save_request()
+    if not saved:
+        return "Your request was not saved! Try again later"
+    
+    return "✅ Your request has been added!"
+
+async def save_request():
+    success = True
+    try:
+        print("writing requests.json...")
+        with open(requests_json, "w") as file:
+            json.dump(song_requests, file, indent=4)
+        print("success writing requests.json")
+    except Exception as e:
+        print(f"error: {e}")
+        success = False
+    
+    try:
+        print("writing last_requests.json...")
+        with open(last_request_json, "w") as file:
+            json.dump(last_requests, file, indent=4)
+        print("success writing last_requests.json")
+    except Exception as e:
+        print(f"error: {e}")
+        success = False
+
+    return success
+
+        
+
+@bot.command()
+async def request(ctx, link):
+    link = str(link)
+    user = ctx.author
+    if "https://www.youtube.com/watch" in link or "https://youtu.be/" in link:
+        await ctx.reply(await add_request(user.name, link))
+    else:
+        await ctx.reply("Must be a YouTube link!")
 
 bot.run(tokens.discord_token)
