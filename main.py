@@ -1,155 +1,160 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands import bot
 from discord import FFmpegPCMAudio
-
-import ffmpeg
 import os
-from os import path
-from os import listdir
 import random
 import asyncio
-
-import mutagen
+import json
+from pathlib import Path
 from mutagen import File
-
 import tokens
 from tokens import discord_token
+
+from urllib.parse import quote_plus
+
+BASE_DIR = Path(__file__).parent
+
+with open(BASE_DIR / "music.json", "r") as f:
+    music_data = json.load(f)
 
 intents = discord.Intents.all()
 intents.members = True
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='>',intents=intents, help_command=None)
+bot = commands.Bot(command_prefix='>', intents=intents, help_command=None)
 
-music_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/music"
-ad_folder = r"/Users/justin/Documents/Documents - Justin's MacBook Pro/.just for fun/discordbots/24radio/ad"
+chat_channel_id = 1193908637433876550
+channel_id = 1312065642937188433
+
+ad_folder = f"{BASE_DIR}/ad"
+system_folder = f"{BASE_DIR}/system"
 
 songs_between_ads = 5
 current_song_count = 0
-
-channel_id = 1312065642937188433
+ads_enabled = True
 connected = False
 check_inactivity = True
 inactivity_duration = 120
+recent_songs = []  # store last few songs to avoid repeats
+
+ad_table = [
+    os.path.join(ad_folder, "spotify.mp3"),
+    os.path.join(ad_folder, "je_katy.mp3"),
+    os.path.join(ad_folder, "grubhub.mp3"),
+    os.path.join(ad_folder, "je_latto.mp3"),
+    os.path.join(ad_folder, "lim.mp3")
+]
+
+admins = [1197161924668952710]
+admin_code = "t00fpAist"
+
 
 async def get_song_duration(file_path):
-    # Load the audio file
     audio = File(file_path)
-    
-    # Check if the file was loaded successfully and has a duration
     if audio and audio.info and audio.info.length:
-        return int(audio.info.length)  # Duration in seconds
-    else:
-        return None  # Couldn't retrieve duration
-
-async def monitor_inactivity(vc):
-    while check_inactivity:
-        await asyncio.sleep(inactivity_duration)
-
-        if len(vc.channel.members) == 1:
-            await vc.disconnect()
-            connected = False
-            break
+        return int(audio.info.length)
+    return 180  # default 3 min if mutagen fails
 
 
 @bot.event
 async def on_ready():
-    print("bot is ready!")
+    print("Bot is ready!")
     print("=============================")
+
 
 @bot.event
 async def on_voice_state_update(member, before, after):
-    if after.channel and after.channel.id == channel_id and (before.channel is None or before.channel.id is not channel_id):
-        voice_channel = after.channel
-
+    global connected, current_song_count
+    if after.channel and after.channel.id == channel_id and (before.channel is None or before.channel.id != channel_id):
         if member.bot:
             return
-        
+
         for vc in bot.voice_clients:
             if vc.channel.id == channel_id:
                 return
 
-        vc = await voice_channel.connect()
-        global connected
+        vc = await after.channel.connect()
         connected = True
 
-        songs = os.listdir(music_folder)
+        chat_channel = bot.get_channel(chat_channel_id)
+        songs = list(music_data.keys())
         if not songs:
-            print("no songs in folder")
+            print("No songs in music_data")
             return
 
+        # play startup sound
+        start_up = os.path.join(system_folder, "welcome.mp3")
+        vc.play(FFmpegPCMAudio(start_up))
+        await asyncio.sleep(40)
+
         while connected:
-            global current_song_count
-            print("checking if vc is still populated")
             if len(vc.channel.members) == 1:
-                print("vc is not populated. disconnecting...")
                 await vc.disconnect()
                 connected = False
                 break
 
-            if current_song_count >= songs_between_ads:
-                print("time for an ad!")
-                ad_path = os.path.join(ad_folder, "wanna_break_from_the_ads.mp3")
-                source = FFmpegPCMAudio(ad_path)
-                vc.play(source)
-                print("playing ad...")
-                await asyncio.sleep(33)
-                print("played ad")
-                current_song_count = 0
-                
+            try:
+                # pick a completely random song
+                song_id = random.choice(list(music_data.keys()))
+                current_song = music_data[song_id]
 
-            print("choosing random song...")
-            current_song_count += 1
-            random_song = random.choice(songs)
-            song_path = os.path.join(music_folder, random_song)
+                song_path = str(BASE_DIR / current_song["path"])
+                print(f"Playing song: {current_song['title']} by {current_song['artist']}")
+                vc.play(FFmpegPCMAudio(song_path))
 
-            source = FFmpegPCMAudio(song_path)
-            vc.play(source)
-            print("playing song")
-            await asyncio.sleep(await get_song_duration(song_path) + 3)
-            print("played song")
+                lyric_term = f"{current_song['title']} by {current_song['artist']} lyrics"
+                encoded = quote_plus(lyric_term)
+
+                # send embed
+                embed = discord.Embed(
+                    title=f"{current_song['title']} - {current_song['artist']}",
+                    description=f"Album: {current_song.get('album', '')}\n[View Lyrics](https://www.google.com/search?q={encoded})",
+                    color=0x00b0f4
+                )
+                embed.set_author(name="🎶 Now Playing | 24Radio")
+                if current_song.get("art"):
+                    embed.set_image(url=current_song["art"])
+                song_msg = await chat_channel.send(embed=embed)
+
+                current_song_count += 1
+
+                # play ad if needed
+                if current_song_count >= songs_between_ads and ads_enabled:
+                    ad_start = os.path.join(system_folder, "adbreak_start.mp3")
+                    vc.play(FFmpegPCMAudio(ad_start))
+                    await asyncio.sleep(40)
+
+                    ad_path = random.choice(ad_table)
+                    vc.play(FFmpegPCMAudio(ad_path))
+                    await asyncio.sleep(await get_song_duration(ad_path) + 3)
+
+                    ad_end = os.path.join(system_folder, "adbreak_end.mp3")
+                    vc.play(FFmpegPCMAudio(ad_end))
+                    await asyncio.sleep(30)
+
+                    current_song_count = 0
+
+                duration = await get_song_duration(song_path)
+                await asyncio.sleep(duration + 3)
+
+                try:
+                    await song_msg.delete()
+                    print("Deleted song info message")
+                except Exception as e:
+                    print(f"Could not delete message: {e}")
+
+            except Exception as e:
+                print(f"Error: {e}")
+                error_path = os.path.join(system_folder, "error.mp3")
+                vc.play(FFmpegPCMAudio(error_path))
+                await asyncio.sleep(10)
+
 
 @bot.command()
-async def help(ctx, arg=None):
-    embed = discord.Embed(title="Help Menu",
-                      description="**How to use 24Radio?**\nSimply join the 24radio voice channel and 24Radio would automatically play unlimited music for you!\n\n**DISCLAIMER:** 24Radio is intended to be solely used privately on the Yogamat server. No copyright infringement intended.\n\n**Songs Included:** (List is not final and may be increased or decreased.)",
-                      colour=0xff9300)
+async def ping(ctx):
+    latency = bot.latency * 1000
+    await ctx.reply(f"Pong! 🏓 Latency: {latency:.2f} ms")
 
-    embed.set_author(name="24Radio")
+discord_token = os.getenv("DISCORD_TOKEN")
 
-    embed.add_field(name="- C418",
-                    value="- - Subwoofer Lullaby\n- - Moog City\n- - Minecraft\n- - Mice on Venus\n- - Dry Hands\n- - Wet Hands\n- - Sweden\n- - Cat\n- - Moog City 2",
-                    inline=True)
-    embed.add_field(name="- Lena Raine",
-                    value="- - Pigstep",
-                    inline=True)
-    embed.add_field(name="- LSPLASH",
-                    value="- - Dawn of the Doors\n- - Elevator Jam\n- - Guiding Light",
-                    inline=True)
-    embed.add_field(name="- Tobu",
-                    value="- - Cruel\n- - Cacao\n- - Candyland",
-                    inline=True)
-    embed.add_field(name="- Dimrain47",
-                    value="- - At the Speed of Light",
-                    inline=True)
-    embed.add_field(name="- djNate",
-                    value="- - Theory of Everything",
-                    inline=True)
-    embed.add_field(name="- F777",
-                    value="- - Deadlocked",
-                    inline=True)
-    embed.add_field(name="- DrPhonics",
-                    value="- - Code Red",
-                    inline=True)
-    embed.add_field(name="- Forever Bound",
-                    value="- - Stereo Madness",
-                    inline=True)
-    embed.add_field(name="- Nintendo",
-                    value="- - Wii Shop Channel Main Theme\n- - Wii Sports Title Theme\n- - Mii Channel Main Theme\n- - Earthbound Sanctuary Guardians",
-                    inline=True)
-
-    
-    await ctx.reply(embed=embed)
-
-bot.run(tokens.discord_token)
+bot.run(discord_token)
