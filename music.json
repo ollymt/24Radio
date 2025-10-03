@@ -1,0 +1,803 @@
+{
+    "1": {
+        "path" : "music/Minecraft_Volume_Alpha__3__Subwoofer_Lullaby.mp3",
+        "title" : "Subwoofer Lullaby",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "2": {
+        "path" : "music/Minecraft_Volume_Alpha__8__Minecraft.mp3",
+        "title" : "Minecraft",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "3": {
+        "path" : "music/Minecraft_Volume_Alpha__11__Mice_on_Venus.mp3",
+        "title" : "Mice on Venus",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "4": {
+        "path" : "music/Minecraft_Volume_Alpha__12__Dry_Hands.mp3",
+        "title" : "Dry Hands",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "5": {
+        "path" : "music/Minecraft_Volume_Alpha__13__Wet_Hands.mp3",
+        "title" : "Wet Hands",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "6": {
+        "path" : "music/Minecraft_Volume_Alpha__6__Moog_City.mp3",
+        "title" : "Moog City",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "7": {
+        "path" : "music/Minecraft_Volume_Alpha__18__Sweden.mp3",
+        "title" : "Sweden",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "8": {
+        "path" : "music/Minecraft_Volume_Alpha__19__Cat.mp3",
+        "title" : "Cat",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Alpha",
+        "art" : "https://f4.bcbits.com/img/a3390257927_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "9": {
+        "path" : "music/C418__Moog_City_2_Minecraft_Volume_Beta.mp3",
+        "title" : "Moog City 2",
+        "artist" : "C418",
+        "album" : "Minecraft — Volume Beta",
+        "art" : "https://f4.bcbits.com/img/a1112985681_16.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "10": {
+        "path" : "music/Pigstep_Stereo_Mix.mp3",
+        "title" : "Pigstep",
+        "artist" : "Lena Raine",
+        "album" : "Minecraft: Nether Update (Original Game Soundtrack)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b2732d8b1ba2af5670ae17f81a4c",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "11": {
+        "path" : "music/Pigstep_Stereo_Mix.mp3",
+        "title" : "Pigstep",
+        "artist" : "Lena Raine",
+        "album" : "Minecraft: Nether Update (Original Game Soundtrack)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b2732d8b1ba2af5670ae17f81a4c",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "12": {
+        "path" : "music/Tobu__Candyland.mp3",
+        "title" : "Candyland",
+        "artist" : "Tobu",
+        "album" : "NCS: Infinity",
+        "art" : "https://i1.sndcdn.com/artworks-000106134174-jhzlx9-t1080x1080.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "13": {
+        "path" : "music/Tobu__Cacao.mp3",
+        "title" : "Cacao",
+        "artist" : "Tobu",
+        "album" : "Cacao",
+        "art" : "https://i1.sndcdn.com/artworks-000159072546-twrce0-t1080x1080.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "14": {
+        "path" : "music/F777__Deadlocked.mp3",
+        "title" : "Deadlocked",
+        "artist" : "F777",
+        "album" : "Smach It Vol. 2",
+        "art" : "https://f4.bcbits.com/img/a2474019202_10.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "15": {
+        "path" : "music/Tobu__Cruel.mp3",
+        "title" : "Cruel",
+        "artist" : "Tobu",
+        "album" : "Cruel",
+        "art" : "https://i1.sndcdn.com/artworks-000349432728-pzojjk-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "16": {
+        "path" : "music/AJR__Growing_Old_On_Bleecker_Street_Acoustic.mp3",
+        "title" : "Growing Old On Bleecker Street (Acoustic)",
+        "artist" : "AJR",
+        "album" : "Living Room",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27395eec6ae5296cef982817889",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "17": {
+        "path" : "music/AJR__Pitchfork_Kids_Official_Audio.mp3",
+        "title" : "Pitchfork Kids",
+        "artist" : "AJR",
+        "album" : "Living Room",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27395eec6ae5296cef982817889",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "18": {
+        "path" : "music/AJR__Alice_By_The_Hudson_Official_Audio.mp3",
+        "title" : "Alice By The Hudson",
+        "artist" : "AJR",
+        "album" : "Infinity - EP",
+        "art" : "https://upload.wikimedia.org/wikipedia/en/c/c5/AJR_Infinity_EP.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "19": {
+        "path" : "music/AJR__WEAK_Official_Lyric_Video.mp3",
+        "title" : "Weak",
+        "artist" : "AJR",
+        "album" : "The Click (Deluxe Edition)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27374be78bd14d095c8d76943a0",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "20": {
+        "path" : "music/AJR__Sober_Up_feat_Rivers_Cuomo_Official_Video.mp3",
+        "title" : "Sober Up (feat. Rivers Cuomo)",
+        "artist" : "AJR",
+        "album" : "The Click (Deluxe Edition)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27374be78bd14d095c8d76943a0",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "21": {
+        "path" : "music/AJR__Way_Less_Sad_Official_Video.mp3",
+        "title" : "Way Less Sad",
+        "artist" : "AJR",
+        "album" : "OK ORCHESTRA",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273e7a3a891ae555b0a46a131ed",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "22": {
+        "path" : "music/AJR__Karma_Live_From_One_Spectacular_Night.mp3",
+        "title" : "Karma (Live From 'One Spectacular Night')",
+        "artist" : "AJR",
+        "album" : "Neotheater",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273a320d7e9efd7602648fb78e3",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "23": {
+        "path" : "music/AJR__The_Dumb_Song_Visualizer.mp3",
+        "title" : "The Dumb Song",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "24": {
+        "path" : "music/AJR__100_Bad_Days_Official_Video.mp3",
+        "title" : "100 Bad Days",
+        "artist" : "AJR",
+        "album" : "Neotheater",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273a320d7e9efd7602648fb78e3",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "25": {
+        "path" : "music/AJR__Touchy_Feely_Fool.mp3",
+        "title" : "Touchy Feely Fool",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "26": {
+        "path" : "music/FNAF_SISTER_LOCATION_Song_by_JT_Music__Join_Us_For_A_Bite_SFM.mp3",
+        "title" : "Join Us For A Bite",
+        "artist" : "JT Music",
+        "album" : "Join Us For A Bite",
+        "art" : "https://images.genius.com/c93b8e4bf073bc23f1da59b42dc930da.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "27": {
+        "path" : "music/OfficialBrain_Power___NOMA.mp3",
+        "title" : "Brain Power",
+        "artist" : "NOMA",
+        "album" : "Brain Power",
+        "art" : "https://i1.sndcdn.com/artworks-000623298505-jqoikf-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "28": {
+        "path" : "music/Crab_Rave__Noisestorm.mp3",
+        "title" : "Crab Rave",
+        "artist" : "Noisestorm",
+        "album" : "Crab Rave",
+        "art" : "https://i.ytimg.com/vi/cE0wfjsybIQ/maxresdefault.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "29": {
+        "path" : "music/Crab_Rave__Noisestorm.mp3",
+        "title" : "Crab Rave",
+        "artist" : "Noisestorm",
+        "album" : "Crab Rave",
+        "art" : "https://i.ytimg.com/vi/cE0wfjsybIQ/maxresdefault.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "30": {
+        "path" : "music/Santa_Claus_Is_Coming_To_Town.mp3",
+        "title" : "Santa Claus Is Coming To Town",
+        "artist" : "jschlatt",
+        "album" : "A Very 1999 Christmas",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27302d8e385c5dcc8f68bf58599",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "31": {
+        "path" : "music/Joo_Won__Fly_Me_to_the_Moon_No_Sound_Effects__Squid_Game_OST.mp3",
+        "title" : "Fly Me To The Moon",
+        "artist" : "Joo Won",
+        "album" : "Squid Game (Original Soundtrack from the Netflix Series)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273c99dc16ff6e997ef6409468a",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "32": {
+        "path" : "music/chesnaurs_w_13336hera.mp3",
+        "title" : "The Christmas Song (Chestnuts Roasting On An Open Fire)",
+        "artist" : "Nat King Cole, Anuc Attitawan, 13336hera",
+        "album" : "The Nat King Cole Story",
+        "art" : "https://i1.sndcdn.com/artworks-NbICtv8nA6WMBbOQ-KBFh5w-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "33": {
+        "path" : "music/sc_is_coming.mp3",
+        "title" : "Santa Claus Is Coming To Town",
+        "artist" : "Anuc Attitawan, 13336hera",
+        "album" : "Santa Claus Is Coming To Town",
+        "art" : "https://i1.sndcdn.com/artworks-NbICtv8nA6WMBbOQ-KBFh5w-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "34": {
+        "path" : "music/all_i_want_4_xmas.mp3",
+        "title" : "All I Want For Christmas Is You",
+        "artist" : "Mariah Carey, Anuc Attitawan, 13336hera",
+        "album" : "Under The Mistletoe",
+        "art" : "https://i1.sndcdn.com/artworks-NbICtv8nA6WMBbOQ-KBFh5w-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "35": {
+        "path" : "music/let it snow.mp3",
+        "title" : "Let It Snow! Let It Snow! Let It Snow!",
+        "artist" : "Vaughn Monroe, Anuc Attitawan, 13336hera",
+        "album" : "Let It Snow! Let It Snow! Let It Snow!",
+        "art" : "https://i1.sndcdn.com/artworks-NbICtv8nA6WMBbOQ-KBFh5w-t500x500.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "36": {
+        "path" : "music/chesnaurs.mp3",
+        "title" : "The Christmas Song (Chestnuts Roasting On An Open Fire)",
+        "artist" : "Anuc Attitawan",
+        "album" : "The Christmas Song (Chestnuts Roasting On An Open Fire)",
+        "art" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdS5cAvvtJ7BrbDouMq0yOksW4WmU2K-1Nuw&s",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "37": {
+        "path" : "music/AJR_Burn_The_House_Down_Live_From_One_Spectacular_Night.mp3",
+        "title" : "Burn The House Down (Live From One Spectacular Night)",
+        "artist" : "AJR",
+        "album" : "The Click (Deluxe Edition)",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27374be78bd14d095c8d76943a0",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "38": {
+        "path" : "music/AJR_Making_of_Bang_Bang_Live_From_One.mp3",
+        "title" : "Making of Bang / Bang (Live From One Spectacular Night)",
+        "artist" : "AJR",
+        "album" : "OK ORCHESTRA",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273e7a3a891ae555b0a46a131ed",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "39": {
+        "path" : "music/AJR_Bang_Way_Less_Sad_Live_on_the.mp3",
+        "title" : "Bang / Way Less Sad (Live on the 2021 Billboard Music Awards)",
+        "artist" : "AJR",
+        "album" : "OK ORCHESTRA",
+        "art" : "https://i.scdn.co/image/ab67616d0000b273e7a3a891ae555b0a46a131ed",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "40": {
+        "path" : "music/Gnarly.mp3",
+        "title" : "Gnarly",
+        "artist" : "KATSEYE",
+        "album" : "Beautiful Chaos",
+        "art" : "https://images.genius.com/71479eb1b51925f5ec53ffb3615ed63a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "41": {
+        "path" : "music/Gabriela.mp3",
+        "title" : "Gabriela",
+        "artist" : "KATSEYE",
+        "album" : "Beautiful Chaos",
+        "art" : "https://images.genius.com/71479eb1b51925f5ec53ffb3615ed63a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "42": {
+        "path" : "music/Touch.mp3",
+        "title" : "Touch",
+        "artist" : "KATSEYE",
+        "album" : "Soft Is Strong",
+        "art" : "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F524ebfb911f42d073c7b4e7270805d61.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "43": {
+        "path" : "music/LoveGame.mp3",
+        "title" : "LoveGame",
+        "artist" : "Lady Gaga",
+        "album" : "The Fame",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2Fdaaf739175f321475713bf1774c34a8a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "44": {
+        "path" : "music/Poker_Face.mp3",
+        "title" : "Poker Face",
+        "artist" : "Lady Gaga",
+        "album" : "The Fame",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2Fdaaf739175f321475713bf1774c34a8a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "45": {
+        "path" : "music/Summerboy.mp3",
+        "title" : "Summerboy",
+        "artist" : "Lady Gaga",
+        "album" : "The Fame",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2Fdaaf739175f321475713bf1774c34a8a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "46": {
+        "path" : "music/Beautiful,_Dirty,_Rich.mp3",
+        "title" : "Beautiful, Dirty, Rich",
+        "artist" : "Lady Gaga",
+        "album" : "The Fame",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2Fdaaf739175f321475713bf1774c34a8a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "47": {
+        "path" : "music/Skeleton_Appreciation_Day_in_Vestal,_N.Y._(Bones)_(2020_Remastered_Version).mp3",
+        "title" : "Skeleton Appreciation Day in Vestal, N.Y. (Bones) (2020 Remastered Version)",
+        "artist" : "Will Wood and the Tapeworms",
+        "album" : "Everything Is A Lot",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2F172d7ddb51277a5bac40533fe14fbce1.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "48": {
+        "path" : "music/6up_5oh_Copout_(Pro__Con)_(2020_Remastered_Version).mp3",
+        "title" : "6up 5oh Copout (Pro / Con) (2020 Remastered Version)",
+        "artist" : "Will Wood and the Tapeworms",
+        "album" : "Everything Is A Lot",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2F172d7ddb51277a5bac40533fe14fbce1.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "49": {
+        "path" : "music/Blue_Velvet_Reboot_Starring_Tom_Waits_(Suburbia_Overture_2024_Edit).mp3",
+        "title" : "'Blue Velvet' Reboot Starring Tom Waits (Suburbia Overture 2024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "50": {
+        "path" : "music/Second_Sight_Seer!_S!_(2222024_Edit).mp3",
+        "title" : "Second Sight Seer! S! (2222024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "51": {
+        "path" : "music/A_Knee_Slapping_Joke_Title_Referring_to_How_Ending_Tracks_on_Will_Wood_Albums_Are_Always_Kind....mp3",
+        "title" : "A Knee-Slapping Joke Title Referring to How Ending Tracks on Will Wood Albums Are Always Kind of Like That (Memento Mori 2024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "52": {
+        "path" : "music/Love,_Me_Normally.mp3",
+        "title" : "Love, Me Normally",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "53": {
+        "path" : "music/I__Me__Myself_(2024_Edit).mp3",
+        "title" : "I / Me / Myself (2024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "54": {
+        "path" : "music/well,_better_than_the_alternative_(Better_Alternative_Edit).mp3",
+        "title" : "...well, better than the alternative (Better Alternative Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "55": {
+        "path" : "music/Ideas_Only_Spread_Because_People_Like_Them,_the_Free_Market_of_Ideas_is_not_a_Meritocracy,....mp3",
+        "title" : "Ideas Only Spread Because People Like Them, the “Free Market of Ideas” is not a Meritocracy, it’s a Set of Unhealthy Coping Skills and a Corporate Oligarchy, Wake Up, Man! Don’t Let the Lies Dim Your Light! anyway this one’s black box warrior (2024 edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "56": {
+        "path" : "music/The_Moral_Implications_of_a_Deterministic_Universe_feat._The_Onceler_(Laplace's_Angel_2024_Edit).mp3",
+        "title" : "IThe Moral Implications of a Deterministic Universe feat. The Onceler (Laplace’s Angel 2024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "57": {
+        "path" : "music/The_Moral_Implications_of_a_Deterministic_Universe_feat._The_Onceler_(Laplace's_Angel_2024_Edit).mp3",
+        "title" : "The Moral Implications of a Deterministic Universe feat. The Onceler (Laplace’s Angel 2024 Edit)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "58": {
+        "path" : "music/AJR___Maybe_Man.mp3",
+        "title" : "Maybe Man",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "59": {
+        "path" : "music/Yes_Im_A_Mess.mp3",
+        "title" : "Yes I'm A Mess",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "60": {
+        "path" : "music/Inertia.mp3",
+        "title" : "Inertia",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "61": {
+        "path" : "music/AJR_2085.mp3",
+        "title" : "2085",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "62": {
+        "path" : "music/The_Plane_That_Never_Lands.mp3",
+        "title" : "The Plane That Never Lands",
+        "artist" : "AJR",
+        "album" : "What No One's Thinking - EP",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fddc346a7b19ebe81ae050ba5498d74fb.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "63": {
+        "path" : "music/A_Dog_Song.mp3",
+        "title" : "A Dog Song",
+        "artist" : "AJR",
+        "album" : "What No One's Thinking - EP",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fddc346a7b19ebe81ae050ba5498d74fb.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "64": {
+        "path" : "music/AJR___Betty.mp3",
+        "title" : "Betty",
+        "artist" : "AJR",
+        "album" : "What No One's Thinking - EP",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fddc346a7b19ebe81ae050ba5498d74fb.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "65": {
+        "path" : "music/I'm_Sorry_You_Went_Crazy.mp3",
+        "title" : "I'm Sorry You Went Crazy",
+        "artist" : "AJR",
+        "album" : "What No One's Thinking - EP",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fddc346a7b19ebe81ae050ba5498d74fb.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "66": {
+        "path" : "music/The_Big_Goodbye.mp3",
+        "title" : "The Big Goodbye",
+        "artist" : "AJR",
+        "album" : "What No One's Thinking - EP",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fddc346a7b19ebe81ae050ba5498d74fb.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "67": {
+        "path" : "music/The_DJ_is_Crying_for_Help.mp3",
+        "title" : "The DJ is Crying for Help",
+        "artist" : "AJR",
+        "album" : "The Maybe Man",
+        "art" : "https://i.scdn.co/image/ab67616d0000b27304a3ca0d3bf91c88f969f905",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "68": {
+        "path" : "music/The_Main_Character.mp3",
+        "title" : "The Main Character",
+        "artist" : "Will Wood",
+        "album" : "'In case I make it'",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F587f7f6ce1ceb21e8f1b60380f68001a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "69": {
+        "path" : "music/Against_the_Kitchen_Floor.mp3",
+        "title" : "Against the Kitchen Floor",
+        "artist" : "Will Wood",
+        "album" : "'In case I make it'",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F587f7f6ce1ceb21e8f1b60380f68001a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "70": {
+        "path" : "music/Cicada_Days.mp3",
+        "title" : "Cicada Days",
+        "artist" : "Will Wood",
+        "album" : "'In case I make it'",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F587f7f6ce1ceb21e8f1b60380f68001a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "71": {
+        "path" : "music/Tomcat_Disposables.mp3",
+        "title" : "Tomcat Disposables",
+        "artist" : "Will Wood",
+        "album" : "'In case I make it'",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F587f7f6ce1ceb21e8f1b60380f68001a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "72": {
+        "path" : "music/White_Noise.mp3",
+        "title" : "White Noise",
+        "artist" : "Will Wood",
+        "album" : "'In case I make it'",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F587f7f6ce1ceb21e8f1b60380f68001a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "73": {
+        "path" : "music/Self_.mp3",
+        "title" : "Self-",
+        "artist" : "Will Wood and the Tapeworms",
+        "album" : "Self-ish",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2Fd242f8c22ade5d6278d6a8f6cf315e91.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "74": {
+        "path" : "music/ish.mp3",
+        "title" : "-ish",
+        "artist" : "Will Wood and the Tapeworms",
+        "album" : "Self-ish",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2Fd242f8c22ade5d6278d6a8f6cf315e91.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "75": {
+        "path" : "music/Dr._Sunshine_Is_Dead.mp3",
+        "title" : "Dr. Sunshine Is Dead",
+        "artist" : "Will Wood and the Tapeworms",
+        "album" : "Self-ish",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2Fd242f8c22ade5d6278d6a8f6cf315e91.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "76": {
+        "path" : "music/I_Write_Sins_Not_Tragedies.mp3",
+        "title" : "I Write Sins Not Tragedies",
+        "artist" : "Panic! At The Disco",
+        "album" : "A Fever You Can't Sweat Out",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fc67f0f72409c339272a90c3c8dcdf683.999x999x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "77": {
+        "path" : "music/Death_of_a_Bachelor.mp3",
+        "title" : "Death of a Bachelor",
+        "artist" : "Panic! At The Disco",
+        "album" : "Death of a Bachelor",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F3db88496df41b9127bb848ee1e1ed91a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "78": {
+        "path" : "music/House_of_Memories.mp3",
+        "title" : "House of Memories",
+        "artist" : "Panic! At The Disco",
+        "album" : "Death of a Bachelor",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F3db88496df41b9127bb848ee1e1ed91a.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "79": {
+        "path" : "music/CHIHIRO.mp3",
+        "title" : "CHIHIRO",
+        "artist" : "Billie Eilish",
+        "album" : "HIT ME HARD AND SOFT",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fc0c7c4996f3587da3a9a39b6518e9001.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "80": {
+        "path" : "music/Telephone.mp3",
+        "title" : "Telephone",
+        "artist" : "Lady Gaga, Beyoncé",
+        "album" : "The Fame Monster (Deluxe Edition)",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Ff9f5c3e7da5f18709819ca2a0919a3ca.1000x1000x1.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "81": {
+        "path" : "music/Bad_Romance.mp3",
+        "title" : "Bad Romance",
+        "artist" : "Lady Gaga",
+        "album" : "The Fame Monster (Deluxe Edition)",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Ff9f5c3e7da5f18709819ca2a0919a3ca.1000x1000x1.jpg",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "82": {
+        "path" : "music/Abracadabra.mp3",
+        "title" : "Abracadabra",
+        "artist" : "Lady Gaga",
+        "album" : "Mayhem",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fb14b830b85ed7a4d381f8fd27e1635c7.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "83": {
+        "path" : "music/Vanish_Into_You.mp3",
+        "title" : "Vanish Into You",
+        "artist" : "Lady Gaga",
+        "album" : "Mayhem",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fb14b830b85ed7a4d381f8fd27e1635c7.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "84": {
+        "path" : "music/Killah.mp3",
+        "title" : "Killah",
+        "artist" : "Lady Gaga",
+        "album" : "Mayhem",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fb14b830b85ed7a4d381f8fd27e1635c7.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "85": {
+        "path" : "music/I_Lied_About_the_Apple_Thing_(Skeleton_Bones_Edition).mp3",
+        "title" : "I Lied About the Apple Thing (Skeleton-Bones Edition)",
+        "artist" : "Will Wood",
+        "album" : "The New Normal",
+        "art" : "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F5064494d3e4c66711af7b6deff29e42d.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "86": {
+        "path" : "music/Lady_Gaga___Garden_Of_Eden_(Official_Audio).mp3",
+        "title" : "Garden Of Eden",
+        "artist" : "Lady Gaga",
+        "album" : "Mayhem",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2Fb14b830b85ed7a4d381f8fd27e1635c7.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "87": {
+        "path" : "music/grandson___Rain_(with_Jessie_Reyez)_[Official_Audio].mp3",
+        "title" : "rain (with Jessie Reyez)",
+        "artist" : "grandson, Jessie Reyez",
+        "album" : "The Suicide Squad (Original Motion Picture Soundtrack)",
+        "art" : "https://t2.genius.com/unsafe/258x258/https%3A%2F%2Fimages.genius.com%2F5f581d1ca8faf9c746c18b02c041684e.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "88": {
+        "path" : "music/Teddybears___Punkrocker_from_'Superman'.mp3",
+        "title" : "Punkrocker (from 'Superman')",
+        "artist" : "Teddybears, Iggy Pop",
+        "album" : "Superman (Original Motion Picture Soundtrack)",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F945d02c145c75a0ff1dd4d83cc4c62b6.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    },
+    "89": {
+        "path" : "music/5_Years_Time.mp3",
+        "title" : "5 Years Time",
+        "artist" : "Noah and the Whale, Eliot James",
+        "album" : "Superman (Original Motion Picture Soundtrack)",
+        "art" : "https://t2.genius.com/unsafe/885x0/https%3A%2F%2Fimages.genius.com%2F945d02c145c75a0ff1dd4d83cc4c62b6.1000x1000x1.png",
+        "playcount" : 0,
+        "lastplayed" : null
+    }
+}
